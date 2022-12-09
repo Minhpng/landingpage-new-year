@@ -5,11 +5,88 @@
 		<link rel="icon" type="image/svg+xml" href="/vite.svg" />
 		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
 		<title>Vite App</title>
+		<link
+			rel="stylesheet"
+			href="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.css"
+		/>
+		<link
+			rel="stylesheet"
+			href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css"
+			integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g=="
+			crossorigin="anonymous"
+			referrerpolicy="no-referrer"
+		/>
 	</head>
 	<body>
-		<main class="section">
-			<h1 class="heading">this is the app created by vite</h1>
-		</main>
+		<section class="hero-section">
+			<header class="container">
+				<div class="logo">
+					<img src="./assets/img/Logo-trang.svg" alt="logo" />
+				</div>
+				<div class="header-support">
+					<div class="support-icon text-white">
+						<svg>
+							<use xlink:href="./assets/img/support-icon.svg#supportIcon"></use>
+						</svg>
+					</div>
+					<div class="header-support-body">
+						<p class="support-body__desc">Hotline hỗ trợ:</p>
+						<p class="support-body__number">097 397 9109</p>
+					</div>
+				</div>
+			</header>
+			<div class="container hero-body">
+				<div class="hero-body--left">
+					<img src="./assets/img/hero-phone.png" alt="Lang kingdom app" />
+				</div>
+				<div class="hero-body--right">
+					<h4 class="hero__subheading">Happy new year 2023 <br /></h4>
+					<h1 class="hero__main-heading">Lang Kingdom</h1>
+					<div class="hero__sale-box">
+						<img
+							class="sale-box_img"
+							src="./assets/img/discount-img.svg"
+							alt="Sieu uu dai"
+						/>
+					</div>
+
+					<p class="hero__description">
+						Tặng thêm 2 món quà để giải quyết nỗi sợ hãi tiếng Anh - Tổng giá
+						trị quà tặng lên đến
+						<span class="text-yel fw-bold">6,120,000đ</span>.
+						<a href="#" class="text-yel fw-bold">Xem chi tiết</a>
+					</p>
+
+					<div class="hero__footer">
+						<div class="countdown-wrapper">
+							<div class="countdown-heading">Ưu đãi kết thúc sau:</div>
+							<div class="countdown-clockWrapper">
+								<div class="countdown-numberWrapper">
+									<span class="countdown-number">5</span>
+									<span class="countdown-prefix">Ngày</span>
+								</div>
+								<div class="countdown-numberWrapper">
+									<span class="countdown-number">12</span>
+									<span class="countdown-prefix">Giờ</span>
+								</div>
+								<div class="countdown-numberWrapper">
+									<span class="countdown-number">25</span>
+									<span class="countdown-prefix">Phút</span>
+								</div>
+								<div class="countdown-numberWrapper">
+									<span class="countdown-number">26</span>
+									<span class="countdown-prefix">Giây</span>
+								</div>
+							</div>
+						</div>
+						<button class="btn hero-btn">ĐĂNG KÝ NGAY</button>
+					</div>
+				</div>
+			</div>
+			<div class="hero-gift-img">
+				<img src="./assets/img/gift.png" alt="" />
+			</div>
+		</section>
 
 		<script type="module" src="/main.js"></script>
 	</body>

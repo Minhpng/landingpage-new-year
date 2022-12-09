@@ -2,3 +2,16 @@
 @use "./variables";
 @use "./utilities";
 @use "./text-color";
+
+@use "./components/countdown";
+@use "./components/hero-section";
+
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;900&family=Pacifico&display=swap");
+
+body {
+	font-family: "inter", sans-serif;
+	background-color: #fff;
+	overflow-x: hidden;
+	color: var(--text-color);
+	// background-image: radial-gradient(at center center, #052157 0%, #020c2d 100%);
+}
