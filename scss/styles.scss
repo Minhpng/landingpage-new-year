@@ -12,11 +12,17 @@
 @import "./components/testimonials-swiper";
 @import "./components/package-section";
 @import "./components/achievement-section";
+@import "./components/footer";
+
+html {
+	scroll-behavior: smooth;
+}
 
 body {
 	font-family: "inter", sans-serif;
 	background-color: #fff;
 	overflow-x: hidden;
 	color: var(--text-color);
+	font-weight: 500;
 	// background-image: radial-gradient(at center center, #052157 0%, #020c2d 100%);
 }

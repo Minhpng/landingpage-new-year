@@ -1,6 +1,6 @@
 .achievement-section {
-	background-color: #211840;
-	color: #fff;
+	// background-color: #211840;
+	// color: #fff;
 
 	.achievement-heading {
 		font-size: var(--fs-heading);
@@ -11,11 +11,11 @@
 	}
 
 	.achievement-list {
-		display: flex;
-		justify-content: center;
-		align-items: center;
-		flex-wrap: wrap;
-		gap: 1rem;
+		display: grid;
+		grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+		justify-items: center;
+		align-items: start;
+		gap: 1.5rem;
 	}
 
 	.achievement-item {
@@ -26,11 +26,23 @@
 		gap: 0.5rem;
 		text-align: center;
 	}
+	@media screen and (min-width: $tablet) {
+		.achievement-item:nth-child(3) {
+			grid-column: 1/ -1;
+			width: min(100%, 400px);
+		}
+	}
+	@media screen and (min-width: $desktop) {
+		.achievement-item:nth-child(3) {
+			grid-column: unset;
+			width: unset;
+		}
+	}
 
 	.achievement-item__point {
 		font-size: 1.5rem;
-		font-weight: 500;
-		color: var(--clr-org);
+		font-weight: 700;
+		color: var(--clr-red);
 	}
 
 	.achievement-item__content {

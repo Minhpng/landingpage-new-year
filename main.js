@@ -69,3 +69,51 @@ const swiper = new Swiper(".swiper", {
         },
     },
 })
+
+const countDown = () => {
+
+    const now = new Date()
+    const endDay = new Date(now.getTime() + (5 * 24 * 60 * 60 * 1000))
+
+    const x = setInterval(() => {
+        const now = new Date()
+
+        const distance = endDay - now
+
+        const day = Math.floor(distance / (1000 * 60 * 60 * 24));
+        const hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+        var minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+        var seconds = Math.floor((distance % (1000 * 60)) / 1000);
+
+        const countdownElement = document.querySelectorAll('.countdown-clockWrapper')
+
+        countdownElement.forEach((countdown) =>
+            countdown.innerHTML = `
+            <div class="countdown-numberWrapper">
+                <span class="countdown-number">${day}</span>
+                <span class="countdown-prefix">Ngày</span>
+            </div>
+            <div class="countdown-numberWrapper">
+                <span class="countdown-number">${hours}</span>
+                <span class="countdown-prefix">Giờ</span>
+            </div>
+            <div class="countdown-numberWrapper">
+                <span class="countdown-number">${minutes}</span>
+                <span class="countdown-prefix">Phút</span>
+            </div>
+            <div class="countdown-numberWrapper">
+                <span class="countdown-number">${seconds}</span>
+                <span class="countdown-prefix">Giây</span>
+            </div>
+            `
+        )
+
+        if (distance < 0) {
+            clearInterval(x)
+        }
+
+    }, 1000)
+    console.log(endDay);
+}
+
+countDown()

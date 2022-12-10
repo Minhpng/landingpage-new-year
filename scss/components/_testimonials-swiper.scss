@@ -10,14 +10,12 @@
 }
 
 .testimonial-heading {
-	font-family: "Pacifico", serif;
-	letter-spacing: 3px;
-	// color: #d2c2ad;
+	font-size: var(--fs-heading);
+	font-weight: var(--fw-bold);
+	text-align: center;
+	line-height: 1.3em;
+	margin-bottom: 1em;
 	color: #fff;
-	margin-top: 1.5rem;
-	text-transform: capitalize;
-	line-height: 1.5em;
-	font-weight: 400;
 }
 
 .testimonial .box {
