@@ -17,7 +17,9 @@
 	--clr-red-700: hsl(0, 82%, 50%);
 	--clr-blue: hsl(229, 65%, 42%);
 	--clr-green: hsl(76, 59%, 51%);
-	--clr-yel: hsl(59, 100%, 50%);
+	--clr-yel: hsl(40, 97%, 54%);
+
+	// --clr-yel: hsl(59, 100%, 50%);
 	--clr-gray-300: hsl(0, 0%, 20%);
 	--clr-gray-400: hsl(0, 0%, 30%);
 	--clr-gray-500: hsl(0, 0%, 40%);
@@ -49,7 +51,7 @@
 	--fs-sec-heading: clamp(var(--fs-600), 5vw, var(--fs-700)); //20px
 	--fs-sub-heading: var(--fs-400); //16px
 
-	--section-padding: 3.5rem;
+	--section-padding: 2rem;
 }
 
 $desktop: 56.25rem;

@@ -1,0 +1,108 @@
+.package-section {
+	.package-heading {
+		font-size: clamp(1.25rem, 2vw + 1rem, 1.5rem);
+		font-weight: 700;
+		color: #333;
+		line-height: 1.3em;
+		margin-bottom: 1em;
+		text-align: center;
+	}
+
+	.package-list {
+		display: grid;
+		grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+		gap: 1rem;
+	}
+
+	.package-list-item {
+		background-color: #fff;
+		padding: 1rem;
+		border-radius: 15px;
+		border: 1px solid rgba(0, 0, 0, 0.1);
+		box-shadow: rgba(0, 0, 0, 0.1) 0px 0px 12px;
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
+		align-items: stretch;
+	}
+
+	.package-name {
+		font-size: clamp(1.25rem, 2vw + 1rem, 1.5rem);
+		font-weight: 700;
+		line-height: 1.3em;
+		color: #2488f6;
+		margin-bottom: 0.3em;
+		display: flex;
+		align-items: center;
+		justify-content: start;
+		flex-wrap: wrap;
+		column-gap: 8px;
+
+		.bestseller,
+		.discount {
+			font-size: 1rem;
+			font-weight: 500;
+			padding: 0.1rem 0.575rem;
+			background-color: hsl(40deg 97% 54%);
+			border-radius: 5px;
+			color: #fff;
+		}
+
+		.discount {
+			background-color: rgb(251, 24, 24);
+		}
+	}
+
+	.package-desc-wrapper {
+		flex-grow: 1;
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
+		align-items: stretch;
+		gap: 8px;
+
+		.btn {
+			background-color: #2488f6;
+			border: 2px solid transparent;
+			border-radius: 10px;
+			max-width: unset;
+
+			&.btn-secondary {
+				color: #2488f6;
+				border-color: currentColor;
+				background-color: #fff;
+			}
+		}
+	}
+
+	.desc-list {
+		list-style-type: none;
+		padding: 0;
+		margin: 0;
+		margin-top: auto;
+	}
+
+	.listItem {
+		display: grid;
+		grid-template-columns: 15px 1fr;
+		align-items: center;
+		justify-items: start;
+		gap: 5px;
+		font-size: 1.125rem;
+		font-weight: 400;
+		color: hsl(0, 0%, 50%);
+		line-height: 1em;
+		margin-bottom: 0.3em;
+
+		.listItem-icon {
+			position: relative;
+			top: 1px;
+		}
+	}
+
+	.package-price {
+		font-size: 1.25rem;
+		font-weight: 700;
+		color: #ea2b2b;
+	}
+}

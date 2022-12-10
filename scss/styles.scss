@@ -1,12 +1,17 @@
-@use "./normalize";
-@use "./variables";
-@use "./utilities";
-@use "./text-color";
-
-@use "./components/countdown";
-@use "./components/hero-section";
-
 @import url("https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;900&family=Pacifico&display=swap");
+
+@import "./normalize";
+@import "./variables";
+@import "./utilities";
+@import "./text-color";
+
+@import "./components/countdown";
+@import "./components/hero-section";
+@import "./components/video-main";
+@import "./components/course-gift";
+@import "./components/testimonials-swiper";
+@import "./components/package-section";
+@import "./components/achievement-section";
 
 body {
 	font-family: "inter", sans-serif;
