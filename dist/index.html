@@ -1,0 +1,488 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<link rel="icon" type="image/svg+xml" href="/vite.svg" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Vite App</title>
+		<link
+			rel="stylesheet"
+			href="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.css"
+		/>
+		<link
+			rel="stylesheet"
+			href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css"
+			integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g=="
+			crossorigin="anonymous"
+			referrerpolicy="no-referrer"
+		/>
+		<script type="module" crossorigin src="/assets/index.1f4d8591.js"></script>
+		<link rel="stylesheet" href="/assets/index.158b6fc9.css">
+	</head>
+	<body>
+		<section class="hero-section">
+			<header class="container">
+				<div class="logo">
+					<img src="/assets/Logo-trang.d4c2feea.svg" alt="logo" />
+				</div>
+				<div class="header-support">
+					<div class="support-icon text-white">
+						<svg>
+							<use xlink:href="/assets/support-icon.aac0bae6.svg#supportIcon"></use>
+						</svg>
+					</div>
+					<div class="header-support-body">
+						<p class="support-body__desc">Hotline hỗ trợ:</p>
+						<p class="support-body__number">097 397 9109</p>
+					</div>
+				</div>
+			</header>
+			<div class="container hero-body">
+				<div class="hero-body--left">
+					<img src="/assets/hero-phone.f729c10a.png" alt="Lang kingdom app" />
+				</div>
+				<div class="hero-body--right">
+					<h4 class="hero__subheading">Happy new year 2023 <br /></h4>
+					<h1 class="hero__main-heading">Lang Kingdom</h1>
+					<!-- <div class="hero__sale-box">
+						<img
+							class="sale-box_img"
+							src="./assets/img/discount-img.svg"
+							alt="Sieu uu dai"
+						/>
+					</div> -->
+					<div class="offer-wrapper">
+						<h2 class="offer-heading">Siêu ưu đãi</h2>
+						<div class="price-discount-box">
+							<span class="old-price">6,120,000đ</span>
+							<span class="new-price">1,290,000đ</span>
+						</div>
+					</div>
+
+					<div class="hero__description-wrapper">
+						<span class="hero__description-img fa-beat"
+							><img src="data:image/png;base64,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" alt=""
+						/></span>
+						<p class="hero__description">
+							Tặng thêm 2 món quà để giải quyết nỗi sợ hãi tiếng Anh - Tổng giá
+							trị quà tặng lên đến
+							<span class="text-yel fw-bold">4,000,000đ</span>.
+							<a href="#package-section" class="text-yel fw-bold inline"
+								>Xem chi tiết
+								<i class="fs-body fa-solid fa-circle-chevron-right"></i
+							></a>
+						</p>
+					</div>
+
+					<div class="hero__footer">
+						<div class="countdown-wrapper">
+							<div class="countdown-heading">Ưu đãi kết thúc sau:</div>
+							<div class="countdown-clockWrapper">
+								<div class="countdown-numberWrapper">
+									<span class="countdown-number">5</span>
+									<span class="countdown-prefix">Ngày</span>
+								</div>
+								<div class="countdown-numberWrapper">
+									<span class="countdown-number">12</span>
+									<span class="countdown-prefix">Giờ</span>
+								</div>
+								<div class="countdown-numberWrapper">
+									<span class="countdown-number">25</span>
+									<span class="countdown-prefix">Phút</span>
+								</div>
+								<div class="countdown-numberWrapper">
+									<span class="countdown-number">26</span>
+									<span class="countdown-prefix">Giây</span>
+								</div>
+							</div>
+						</div>
+						<a href="#package-section" class="btn hero-btn">ĐĂNG KÝ NGAY</a>
+					</div>
+				</div>
+			</div>
+			<div class="hero-gift-img">
+				<img src="/assets/gift.a4572069.svg" alt="" />
+			</div>
+		</section>
+
+		<!-- ===================================
+				Video main section
+			=-=====================================-->
+
+		<section class="section video-main-section">
+			<div class="container video-section-wrapper">
+				<div class="video-section__left">
+					<h1 class="video-section__heading">
+						Chỉ cần 83 phút xem video này, dám cá 100% bạn sẽ giỏi tiếng Anh
+						giao tiếp, dù bạn có nằm mơ cũng không thể tin!
+					</h1>
+				</div>
+				<div class="video-section__right video-wrapper">
+					<span class="play-icon">
+						<i class="fas fa-play"></i>
+					</span>
+					<video video-controler poster="/assets/video-hero-thumbnail.7ab999e0.png">
+						<source
+							src="https://static.langkingdom.com/webinars/videos/LP-hero-220814.mp4"
+							type="video/mp4"
+						/>
+					</video>
+				</div>
+			</div>
+
+			<div class="hero-gift container">
+				<h2 class="hero-gift__heading">
+					TẶNG THÊM 2 MÓN QUÀ ĐỂ GIẢI QUYẾT 2 NỖI SỢ KHI BẠN GIAO TIẾP TIẾNG ANH
+				</h2>
+				<div class="hero-gift__body">
+					<ul class="list-number">
+						<li class="list-number__item circle">
+							<p class="list-heading">
+								Đọc được bất kỳ từ nào trong từ điển - Đập tan nỗi sợ phát âm
+								sai:
+							</p>
+							<p class="list-desc">
+								Tặng bạn Khoá học qua video "10 ngày nắm vững phát âm IPA giọng
+								bản xứ và đọc làu làu từ điển" cùng thầy Thắng Phạm
+								<br /><span class="inline"
+									>Trị giá:
+									<span class="text-yel strike">2.000.000 VNĐ</span></span
+								>
+							</p>
+						</li>
+						<li class="list-number__item circle">
+							<p class="list-heading">
+								Học xong khóa này không còn sợ khi đặt câu, ngữ pháp trở nên dễ
+								như ăn bánh:
+							</p>
+							<p class="list-desc">
+								Tặng bạn Khóa học qua video "60 điểm ngữ pháp lấy lại tất tần
+								tật căn bản mà người ta không muốn hệ thống hóa cho bạn!"
+								<br /><span class="inline"
+									>Trị giá:
+									<span class="text-yel strike">2.000.000 VNĐ</span></span
+								>
+							</p>
+						</li>
+					</ul>
+				</div>
+			</div>
+			<!-- <div class="btn-wraper container">
+				<button class="btn">Đăng ký ngay</button>
+			</div> -->
+			<div class="image-wrapper">
+				<span class="fixed-image santaClauseImage"
+					><img src="./assets/img/santaClause.svg" alt=""
+				/></span>
+				<span class="fixed-image christmasTreeImage"
+					><img src="./assets/img/christmasTree.svg" alt=""
+				/></span>
+			</div>
+		</section>
+
+		<!-- ===========================
+                Packages section
+            ================================= -->
+
+		<section id="package-section" class="section package-section">
+			<div class="container">
+				<h2 class="package-heading">
+					Mức giá ưu đãi dành cho bạn <br />Chỉ 1 lần duy nhất
+				</h2>
+				<div class="countdown-wrapper">
+					<div class="countdown-heading">Ưu đãi kết thúc sau:</div>
+					<div class="countdown-clockWrapper">
+						<div class="countdown-numberWrapper">
+							<span class="countdown-number">5</span>
+							<span class="countdown-prefix">Ngày</span>
+						</div>
+						<div class="countdown-numberWrapper">
+							<span class="countdown-number">12</span>
+							<span class="countdown-prefix">Giờ</span>
+						</div>
+						<div class="countdown-numberWrapper">
+							<span class="countdown-number">25</span>
+							<span class="countdown-prefix">Phút</span>
+						</div>
+						<div class="countdown-numberWrapper">
+							<span class="countdown-number">26</span>
+							<span class="countdown-prefix">Giây</span>
+						</div>
+					</div>
+				</div>
+				<div class="package-list">
+					<div class="package-list-item">
+						<h2 class="package-name">
+							Gói đặc biệt <span class="bestseller">Bestseller</span
+							><span class="discount">-80%</span>
+						</h2>
+						<div class="package-desc-wrapper">
+							<ul class="desc-list">
+								<li class="listItem">
+									<div class="listItem-icon">
+										<img src="/assets/list-check.78a51e38.svg" alt="" />
+									</div>
+									<p class="content">Gói 2 năm học</p>
+								</li>
+								<li class="listItem">
+									<div class="listItem-icon">
+										<img src="/assets/list-check.78a51e38.svg" alt="" />
+									</div>
+									<p class="content">Tặng thêm 6 tháng học</p>
+								</li>
+								<li class="listItem">
+									<div class="listItem-icon">
+										<img src="/assets/list-check.78a51e38.svg" alt="" />
+									</div>
+									<p class="content">Khóa 10 ngày phát âm</p>
+								</li>
+								<li class="listItem">
+									<div class="listItem-icon">
+										<img src="/assets/list-check.78a51e38.svg" alt="" />
+									</div>
+									<p class="content">Khóa lấy lại căn bản</p>
+								</li>
+							</ul>
+							<p class="package-price">
+								<span class="strike text-gray-800">6.120.000đ</span> 1.290.000đ
+							</p>
+							<button class="btn">Đăng ký ngay</button>
+						</div>
+					</div>
+					<div class="package-list-item">
+						<h2 class="package-name">Gói 2 năm</h2>
+						<div class="package-desc-wrapper">
+							<ul class="desc-list">
+								<li class="listItem">
+									<div class="listItem-icon">
+										<img src="/assets/list-check.78a51e38.svg" alt="" />
+									</div>
+									<p class="content">Gói 2 năm học</p>
+								</li>
+								<li class="listItem">
+									<div class="listItem-icon">
+										<img src="/assets/list-cross.55b49526.svg" alt="" />
+									</div>
+									<p class="content">Tặng thêm 6 tháng học</p>
+								</li>
+								<li class="listItem">
+									<div class="listItem-icon">
+										<img src="/assets/list-cross.55b49526.svg" alt="" />
+									</div>
+									<p class="content">Khóa 10 ngày phát âm</p>
+								</li>
+								<li class="listItem">
+									<div class="listItem-icon">
+										<img src="/assets/list-cross.55b49526.svg" alt="" />
+									</div>
+									<p class="content">Khóa lấy lại căn bản</p>
+								</li>
+							</ul>
+							<p class="package-price">
+								<span class="strike text-gray-800">6.120.000đ</span> 1.290.000đ
+							</p>
+							<button class="btn btn-secondary">Đăng ký ngay</button>
+						</div>
+					</div>
+					<div class="package-list-item">
+						<h2 class="package-name">Gói 1 năm</h2>
+						<div class="package-desc-wrapper">
+							<ul class="desc-list">
+								<li class="listItem">
+									<div class="listItem-icon">
+										<img src="/assets/list-check.78a51e38.svg" alt="" />
+									</div>
+									<p class="content">Gói 1 năm học</p>
+								</li>
+								<li class="listItem">
+									<div class="listItem-icon">
+										<img src="/assets/list-check.78a51e38.svg" alt="" />
+									</div>
+									<p class="content">Tặng thêm 3 tháng học</p>
+								</li>
+								<li class="listItem">
+									<div class="listItem-icon">
+										<img src="/assets/list-cross.55b49526.svg" alt="" />
+									</div>
+									<p class="content">Khóa 10 ngày phát âm</p>
+								</li>
+								<li class="listItem">
+									<div class="listItem-icon">
+										<img src="/assets/list-cross.55b49526.svg" alt="" />
+									</div>
+									<p class="content">Khóa lấy lại căn bản</p>
+								</li>
+							</ul>
+							<p class="package-price">
+								<span class="strike text-gray-800">6.120.000đ</span> 1.290.000đ
+							</p>
+							<button class="btn btn-secondary">Đăng ký ngay</button>
+						</div>
+					</div>
+				</div>
+			</div>
+		</section>
+
+		<!-- ===================================
+				Video Qua tang section
+			=-=====================================-->
+
+		<section class="section course__gift">
+			<div class="container">
+				<div class="gift__item text-center">
+					<h2 class="course__gift-heading">Quà tặng #1</h2>
+					<p class="gift__item-title fs-primary-heading fw-bold">
+						Khoá học video:<br />
+						"10 ngày nắm vững phát âm IPA giọng bản xứ và đọc làu làu từ điển"
+					</p>
+					<p class="fs-body">👇 Xem là hiểu ngay 👇</p>
+					<div class="videos-box mb10">
+						<div video-wrapper class="video-wrapper">
+							<span class="play-icon">
+								<i class="fas fa-play"></i>
+							</span>
+							<video
+								video-controler
+								poster="/assets/video-thumb-gift1.210e194b.jpg"
+							>
+								<source
+									src="https://static.langkingdom.com/webinars/videos/LP-phat-am-220814.mp4"
+									type="video/mp4"
+								/>
+							</video>
+						</div>
+					</div>
+				</div>
+				<section class="divider section">
+					<div class="container text-center">
+						<img src="/assets/divider.72c34783.svg" class="divider-item" alt="" />
+					</div>
+				</section>
+				<div class="gift__item text-center">
+					<h2 class="course__gift-heading">Quà tặng #2</h2>
+					<p class="gift__item-title fs-primary-heading fw-bold">
+						Khoá học video:<br />
+						"60 điểm ngữ pháp lấy lại tất tần tật căn bản mà người ta không muốn
+						hệ thống hóa cho bạn!"
+					</p>
+					<p class="fs-body">👇 Xem là hiểu ngay 👇</p>
+					<div class="videos-box mb10">
+						<div video-wrapper class="video-wrapper">
+							<span class="play-icon">
+								<i class="fas fa-play"></i>
+							</span>
+							<video
+								video-controler
+								poster="/assets/video-thumb-gift2.6a0c13b9.jpg"
+							>
+								<source
+									src="https://static.langkingdom.com/webinars/videos/LP-ngu-phap-220814.mp4"
+									type="video/mp4"
+								/>
+							</video>
+						</div>
+					</div>
+				</div>
+			</div>
+		</section>
+
+		<!-- ===========================
+                testimonials
+            ================================= -->
+		<section class="testimonial text-center section">
+			<div class="container w800">
+				<h2 class="fs-primary-heading fw-bold testimonial-heading">
+					Học viên nói gì về Lang Kingdom?
+				</h2>
+				<div class="swiper box">
+					<!-- <p class="quote"><i class="fa-solid fa-quote-right"></i></p> -->
+					<div reviewWrapper class="swiper-wrapper">
+						<div class="swiper-slide">
+							<img src="./assets/img/review1.jpg" alt="" />
+						</div>
+					</div>
+					<div class="custom-swiper-navigation">
+						<div class="swiper-button-prev">
+							<i class="fa-solid fa-chevron-left"></i>
+						</div>
+						<div class="swiper-pagination"></div>
+						<div class="swiper-button-next">
+							<i class="fa-solid fa-chevron-right"></i>
+						</div>
+					</div>
+				</div>
+			</div>
+		</section>
+
+		<!-- ===================================
+					achievments section
+				=-=====================================-->
+
+		<section class="section achievement-section">
+			<div class="container">
+				<h2 class="achievement-heading">
+					Học viên Lang Kingdom nhìn thấy tiến bộ rõ rệt chỉ sau 3-6 tháng:
+				</h2>
+				<ul class="achievement-list">
+					<li class="achievement-item">
+						<p class="achievement-item__point">1+ tháng</p>
+						<p class="achievement-item__content">
+							Tham gia giao tiếp nhiều chủ đề thông dụng hàng ngày; nắm bắt,
+							tiếp nhận thông tin ở mức độ vừa phải A2 Châu Âu; IELTS 3.0-3.5;
+							TOEFL iBT 40-46
+						</p>
+						<p class="achievement-item__content">
+							<span class="fw-bold">Trình độ tương đương:</span> A2 Châu Âu;
+							IELTS 3.0-3.5; TOEFL iBT 40-46
+						</p>
+					</li>
+					<li class="achievement-item">
+						<p class="achievement-item__point">2-3 tháng</p>
+						<p class="achievement-item__content">
+							Tham gia giao tiếp nhiều chủ đề thông dụng hàng ngày; nắm bắt,
+							tiếp nhận thông tin ở mức độ vừa phải A2 Châu Âu; IELTS 3.0-3.5;
+							TOEFL iBT 40-46
+						</p>
+						<p class="achievement-item__content">
+							<span class="fw-bold">Trình độ tương đương:</span> A2 Châu Âu;
+							IELTS 3.0-3.5; TOEFL iBT 40-46
+						</p>
+					</li>
+					<li class="achievement-item">
+						<p class="achievement-item__point">3-6 tháng</p>
+						<p class="achievement-item__content">
+							Tham gia giao tiếp nhiều chủ đề thông dụng hàng ngày; nắm bắt,
+							tiếp nhận thông tin ở mức độ vừa phải
+						</p>
+						<p class="achievement-item__content">
+							<span class="fw-bold">Trình độ tương đương:</span> A2 Châu Âu;
+							IELTS 3.0-3.5; TOEFL iBT 40-46
+						</p>
+					</li>
+				</ul>
+				<div class="btn-wraper">
+					<span></span>
+					<a href="#package-section" class="btn">Đăng ký ngay</a>
+					<span></span>
+				</div>
+			</div>
+		</section>
+		<footer>
+			<div className="container">
+				<h1>Lang Kingdom</h1>
+				<p>
+					470 North Bridge Road,
+					<span className="inline">#05-12 Bugis Cube,</span> Singapore (188735)
+				</p>
+				<p>
+					<i className="far fa-registered icon"></i>
+					2022 Lang Kingdom Pte. Ltd.
+					<span className="inline">All Rights Reserved.</span>
+				</p>
+			</div>
+		</footer>
+
+		<script src="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.js"></script>
+		
+	</body>
+</html>
