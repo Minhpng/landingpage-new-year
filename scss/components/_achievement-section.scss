@@ -26,18 +26,18 @@
 		gap: 0.5rem;
 		text-align: center;
 	}
-	@media screen and (min-width: $tablet) {
-		.achievement-item:nth-child(3) {
-			grid-column: 1/ -1;
-			width: min(100%, 400px);
-		}
-	}
-	@media screen and (min-width: $desktop) {
-		.achievement-item:nth-child(3) {
-			grid-column: unset;
-			width: unset;
-		}
-	}
+	// @media screen and (min-width: $tablet) {
+	// 	.achievement-item:nth-child(3) {
+	// 		grid-column: 1/ -1;
+	// 		width: min(100%, 400px);
+	// 	}
+	// }
+	// @media screen and (min-width: $desktop) {
+	// 	.achievement-item:nth-child(3) {
+	// 		grid-column: unset;
+	// 		width: unset;
+	// 	}
+	// }
 
 	.achievement-item__point {
 		font-size: 1.5rem;
