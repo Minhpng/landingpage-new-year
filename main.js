@@ -35,12 +35,8 @@ const reviewList = [
     { src: "./assets/img/comment/review-77.jpg" },
 ]
 
-const img = {
-    img1, img2, img3, img4, img5, img6, img7
-}
-
-console.log(img);
-
+const img =
+    [img1, img2, img3, img4, img5, img6, img7]
 
 // const htmlReview = reviewList.map((review) => {
 //     return `
@@ -49,7 +45,7 @@ console.log(img);
 //             </div>
 //             `
 // })
-const htmlReview = Object.values(img).map((review) => {
+const htmlReview = img.map((review) => {
     return `
             <div class="swiper-slide">
               <img src="${review}" alt="">
@@ -93,49 +89,47 @@ const swiper = new Swiper(".swiper", {
     },
 })
 
-const countDown = () => {
+    ; (() => {
 
-    const now = new Date()
-    const endDay = new Date(now.getTime() + (5 * 24 * 60 * 60 * 1000))
-
-    const x = setInterval(() => {
         const now = new Date()
+        const endDay = new Date(now.getTime() + (5 * 24 * 60 * 60 * 1000))
 
-        const distance = endDay - now
+        const x = setInterval(() => {
+            const now = new Date()
 
-        const day = Math.floor(distance / (1000 * 60 * 60 * 24));
-        const hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
-        var minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
-        var seconds = Math.floor((distance % (1000 * 60)) / 1000);
+            const distance = endDay - now
 
-        const countdownElement = document.querySelectorAll('.countdown-clockWrapper')
+            const day = Math.floor(distance / (1000 * 60 * 60 * 24));
+            const hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+            var minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+            var seconds = Math.floor((distance % (1000 * 60)) / 1000);
 
-        countdownElement.forEach((countdown) =>
-            countdown.innerHTML = `
-            <div class="countdown-numberWrapper">
-                <span class="countdown-number">${day}</span>
-                <span class="countdown-prefix">Ngày</span>
-            </div>
-            <div class="countdown-numberWrapper">
-                <span class="countdown-number">${hours}</span>
-                <span class="countdown-prefix">Giờ</span>
-            </div>
-            <div class="countdown-numberWrapper">
-                <span class="countdown-number">${minutes}</span>
-                <span class="countdown-prefix">Phút</span>
-            </div>
-            <div class="countdown-numberWrapper">
-                <span class="countdown-number">${seconds}</span>
-                <span class="countdown-prefix">Giây</span>
-            </div>
-            `
-        )
+            const countdownElement = document.querySelectorAll('.countdown-clockWrapper')
 
-        if (distance < 0) {
-            clearInterval(x)
-        }
+            countdownElement.forEach((countdown) =>
+                countdown.innerHTML = `
+        <div class="countdown-numberWrapper">
+            <span class="countdown-number">${day}</span>
+            <span class="countdown-prefix">Ngày</span>
+        </div>
+        <div class="countdown-numberWrapper">
+            <span class="countdown-number">${hours}</span>
+            <span class="countdown-prefix">Giờ</span>
+        </div>
+        <div class="countdown-numberWrapper">
+            <span class="countdown-number">${minutes}</span>
+            <span class="countdown-prefix">Phút</span>
+        </div>
+        <div class="countdown-numberWrapper">
+            <span class="countdown-number">${seconds}</span>
+            <span class="countdown-prefix">Giây</span>
+        </div>
+        `
+            )
 
-    }, 1000)
-}
+            if (distance < 0) {
+                clearInterval(x)
+            }
 
-countDown()
+        }, 1000)
+    })()
