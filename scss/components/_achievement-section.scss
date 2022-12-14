@@ -40,9 +40,14 @@
 	// }
 
 	.achievement-item__point {
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		// gap: 10px;
 		font-size: 1.5rem;
 		font-weight: 700;
 		color: var(--clr-red);
+		flex-direction: column-reverse;
 	}
 
 	.achievement-item__content {
