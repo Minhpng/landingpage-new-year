@@ -26,6 +26,17 @@
 		flex-direction: column;
 		justify-content: center;
 		align-items: stretch;
+		border: 2px solid transparent;
+
+		&.active {
+			background-color: hsl(211, 100%, 25%);
+			// border-color: #2488f6;
+
+			.listItem,
+			.package-name {
+				color: white;
+			}
+		}
 	}
 
 	.package-name {
@@ -87,18 +98,18 @@
 	.listItem {
 		display: grid;
 		grid-template-columns: 15px 1fr;
-		align-items: center;
+		align-items: start;
 		justify-items: start;
 		gap: 5px;
 		font-size: 1.125rem;
 		font-weight: 400;
-		color: hsl(0, 0%, 50%);
-		line-height: 1em;
+		color: hsl(0, 0%, 40%);
+		line-height: 1.3em;
 		margin-bottom: 0.3em;
 
 		.listItem-icon {
 			position: relative;
-			top: 1px;
+			top: 4px;
 		}
 	}
 
