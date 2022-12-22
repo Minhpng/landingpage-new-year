@@ -55,6 +55,49 @@
 		}
 	}
 
+	.video-section-wrapper {
+		margin-block: 1.5rem;
+		.big-heading {
+			font-size: clamp(2.5rem, 4vw + 1rem, 3rem);
+			color: #fff;
+			line-height: 1.3;
+			font-weight: 800;
+			text-align: center;
+			display: flex;
+			justify-content: center;
+			align-items: center;
+			flex-direction: column;
+			margin-bottom: 0.8em;
+
+			h1 {
+				transform: skew(-5deg, 0deg);
+			}
+		}
+
+		.heading-link {
+			font-size: 1.125rem;
+			color: #fff;
+			font-weight: 400;
+		}
+
+		.video-section__heading {
+			font-size: var(--fs-sec-heading);
+			color: #fff;
+			line-height: 1.2;
+			text-align: center;
+			margin-bottom: 0.5em;
+		}
+	}
+
+	.gift-divider-wrapper {
+		height: 30px;
+		width: 100%;
+		background-image: url(./assets/img/gift-ribbon.svg);
+		background-repeat: repeat-x;
+		background-size: contain;
+		margin-bottom: 15px;
+	}
+
 	.hero-body {
 		display: grid;
 		align-items: start;
