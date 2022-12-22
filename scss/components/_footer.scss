@@ -6,6 +6,23 @@ footer {
 	padding-bottom: 1rem;
 	margin-top: auto;
 	text-align: center;
+
+	.footer-naviagtor-wrapper {
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		flex-wrap: wrap;
+		row-gap: 0.2em;
+		column-gap: 0.8em;
+		margin-block: 0.5em;
+
+		.footer-link {
+			font-size: 1.025rem;
+			color: #fff;
+			text-decoration: none;
+			cursor: pointer;
+		}
+	}
 }
 footer h1 {
 	font-size: 1.25rem;
