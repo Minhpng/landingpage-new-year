@@ -81,7 +81,7 @@
 		}
 
 		.video-section__heading {
-			font-size: var(--fs-sec-heading);
+			font-size: clamp(2rem, 4vw + 1rem, 2.75rem);
 			color: #fff;
 			line-height: 1.2;
 			text-align: center;
@@ -92,7 +92,7 @@
 	.gift-divider-wrapper {
 		height: 30px;
 		width: 100%;
-		background-image: url(./assets/img/gift-ribbon.svg);
+		background-image: url(~/assets/img/gift-ribbon.svg);
 		background-repeat: repeat-x;
 		background-size: contain;
 		margin-bottom: 15px;
