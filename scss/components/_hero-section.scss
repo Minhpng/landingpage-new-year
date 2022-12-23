@@ -55,6 +55,21 @@
 		}
 	}
 
+	.hero-achievement {
+		color: #fff;
+
+		.hero-heading-secondary {
+			font-size: var(--fs-heading);
+			font-weight: 800;
+			color: var(--clr-yel);
+			margin-bottom: 0.5em;
+		}
+
+		.list-number__item::before {
+			color: var(--clr-yel);
+		}
+	}
+
 	.video-section-wrapper {
 		.arrow {
 			position: absolute;
