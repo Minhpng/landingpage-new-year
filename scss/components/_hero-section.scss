@@ -64,6 +64,7 @@
 			rotate: 35deg;
 			right: 50px;
 			animation: arrowPointer 1s ease-in infinite;
+			user-select: none;
 		}
 		@keyframes arrowPointer {
 			0% {

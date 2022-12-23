@@ -133,3 +133,17 @@ const swiper = new Swiper(".swiper", {
 
         }, 1000)
     })()
+
+const videos = document.querySelectorAll('[video-controler]')
+videos.forEach((video, index) => {
+    const videoWrapper = video.closest('.video-wrapper')
+    const playBtn = videoWrapper.querySelector('.play-icon')
+    const arrow = videoWrapper.querySelector('.arrow')
+    videoWrapper.onclick = function () {
+        video.play()
+        video.setAttribute("controls", "controls")
+        console.log('clicked');
+        playBtn.style.display = 'none'
+        arrow.style.display = 'none'
+    }
+})
