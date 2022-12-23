@@ -56,6 +56,27 @@
 	}
 
 	.video-section-wrapper {
+		.arrow {
+			position: absolute;
+			z-index: 1;
+			width: 50px;
+			top: -50px;
+			rotate: 35deg;
+			right: 50px;
+			animation: arrowPointer 1s ease-in infinite;
+		}
+		@keyframes arrowPointer {
+			0% {
+				translate: 10px 10px;
+			}
+
+			50% {
+				translate: 15px 0px;
+			}
+			100% {
+				translate: 10px 10px;
+			}
+		}
 		margin-block: 1.5rem;
 		.big-heading {
 			font-size: clamp(2.5rem, 4vw + 1rem, 3rem);
