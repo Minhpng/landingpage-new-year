@@ -18,7 +18,7 @@ footer {
 
 		.footer-link {
 			font-size: 1.025rem;
-			color: hsl(0, 0%, 70%);
+			color: hsl(0, 0%, 100%);
 			text-decoration: none;
 			cursor: pointer;
 		}
@@ -41,6 +41,7 @@ footer h1 {
 footer p {
 	font-size: 0.875rem;
 	line-height: 1.4;
+	color: hsl(0, 0%, 70%);
 
 	i {
 		position: relative;

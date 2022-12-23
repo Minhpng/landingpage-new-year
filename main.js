@@ -142,7 +142,6 @@ videos.forEach((video, index) => {
     videoWrapper.onclick = function () {
         video.play()
         video.setAttribute("controls", "controls")
-        console.log('clicked');
         playBtn.style.display = 'none'
         arrow.style.display = 'none'
     }
