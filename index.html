@@ -29,8 +29,8 @@
 			crossorigin="anonymous"
 			referrerpolicy="no-referrer"
 		/>
-		<script type="module" crossorigin src="/landingpage-new-year/assets/index.ccbd30f5.js"></script>
-		<link rel="stylesheet" href="/landingpage-new-year/assets/index.08626aeb.css">
+		
+		<link rel="stylesheet" href="/landingpage-new-year/assets/index.0285ceca.css">
 	</head>
 	<body>
 		<section class="hero-section">
@@ -500,6 +500,76 @@
 			</div>
 		</footer>
 		<script src="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.js"></script>
-		
+		<!-- <script type="module" src="/main.js">
+
+		</script> -->
+		<script>
+			const reviewList = [
+				{ src: "./assets/img/comment/review-1.jpg" },
+				{ src: "./assets/img/comment/review-2.jpg" },
+				{ src: "./assets/img/comment/review-3.jpg" },
+				{ src: "./assets/img/comment/review-4.jpg" },
+				{ src: "./assets/img/comment/review-5.jpg" },
+				{ src: "./assets/img/comment/review-6.jpg" },
+				{ src: "./assets/img/comment/review-7.jpg" },
+			]
+
+			const htmlReview = reviewList.map((review) => {
+				return `
+            <div class="swiper-slide">
+              <img src="${review.src}" alt="">
+            </div>
+            `
+			})
+
+			const reviewWrapper = document.querySelector("[reviewWrapper]")
+			reviewWrapper.innerHTML = htmlReview.join("")
+
+			const swiper = new Swiper(".swiper", {
+				loop: true,
+				spaceBetween: 10,
+
+				autoplay: {
+					delay: 5000,
+					pauseOnMouseEnter: true,
+				},
+
+				navigation: {
+					nextEl: ".swiper-button-next",
+					prevEl: ".swiper-button-prev",
+					rewind: true,
+				},
+
+				pagination: {
+					el: ".swiper-pagination",
+					clickable: true,
+				},
+
+				breakpoints: {
+					640: {
+						slidesPerView: 2,
+						spaceBetween: 30,
+					},
+
+					1024: {
+						slidesPerView: 2,
+						spaceBetween: 40,
+					},
+				},
+			})
+
+			const videos = document.querySelectorAll("[video-controler]")
+			videos.forEach((video, index) => {
+				const videoWrapper = video.closest(".video-wrapper")
+				const playBtn = videoWrapper.querySelector(".play-icon")
+				const arrow = videoWrapper.querySelector(".arrow")
+				videoWrapper.onclick = function () {
+					video.play()
+					video.setAttribute("controls", "controls")
+					playBtn.style.display = "none"
+					arrow.style.display = "none"
+				}
+			})
+		</script>
 	</body>
 </html>
