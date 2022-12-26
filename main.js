@@ -1,12 +1,12 @@
 import './scss/styles.scss'
 
-import img1 from './assets/img/comment/review-1.jpg'
-import img2 from './assets/img/comment/review-2.jpg'
-import img3 from './assets/img/comment/review-3.jpg'
-import img4 from './assets/img/comment/review-4.jpg'
-import img5 from './assets/img/comment/review-5.jpg'
-import img6 from './assets/img/comment/review-6.jpg'
-import img7 from './assets/img/comment/review-7.jpg'
+// import img1 from './assets/img/comment/review-1.jpg'
+// import img2 from './assets/img/comment/review-2.jpg'
+// import img3 from './assets/img/comment/review-3.jpg'
+// import img4 from './assets/img/comment/review-4.jpg'
+// import img5 from './assets/img/comment/review-5.jpg'
+// import img6 from './assets/img/comment/review-6.jpg'
+// import img7 from './assets/img/comment/review-7.jpg'
 
 
 
@@ -35,23 +35,23 @@ const reviewList = [
     { src: "./assets/img/comment/review-77.jpg" },
 ]
 
-const img =
-    [img1, img2, img3, img4, img5, img6, img7]
+// const img =
+//     [img1, img2, img3, img4, img5, img6, img7]
 
-// const htmlReview = reviewList.map((review) => {
-//     return `
-//             <div class="swiper-slide">
-//               <img src="${review.src}" alt="">
-//             </div>
-//             `
-// })
-const htmlReview = img.map((review) => {
+const htmlReview = reviewList.map((review) => {
     return `
             <div class="swiper-slide">
-              <img src="${review}" alt="">
+              <img src="${review.src}" alt="">
             </div>
             `
 })
+// const htmlReview = img.map((review) => {
+//     return `
+//             <div class="swiper-slide">
+//               <img src="${review}" alt="">
+//             </div>
+//             `
+// })
 
 const reviewWrapper = document.querySelector("[reviewWrapper]")
 reviewWrapper.innerHTML = htmlReview.join("")
